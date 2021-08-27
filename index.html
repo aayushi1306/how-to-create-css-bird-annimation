@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>How to create bird annimation</title>
+        <style>
+                        .a1{
+                width:129px;
+                height:129px;
+                background-image: url("img/2.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 0px 0px;
+                animation-name: bird;
+                animation-duration: 0.7s;
+                animation-iteration-count: infinite;
+                animation-timing-function: steps(4);
+            }
+            @keyframes bird{
+                0%{
+                    background-position: 0px 0px;
+                }
+                100%{
+                    background-position: -516px 0px;
+                }
+            }
+            .fly{
+                position: relative;
+                animation-name: flybird;
+                animation-duration: 9s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                animation-play-state: running;
+            }
+            @keyframes flybird{
+                from{
+                    left:0%;
+                }
+                to{
+                    left:100%;
+                }
+            }
+            .a2{
+                width:140px;
+                height:150px;
+                background-image: url("img/3.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                animation-name: bird2;
+                animation-duration: 0.3s;
+                animation-iteration-count: infinite;
+                animation-timing-function: steps(3);
+                transform: rotateZ(45deg);
+            }
+            @keyframes bird2{
+                0%{
+                    background-position: 0px 0px; 
+                }
+                100%{
+                    background-position: -460px 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fly">
+            <div class="a1"></div>
+            <div class="a2"></div>
+        </div>
+    </body>
+</html>
